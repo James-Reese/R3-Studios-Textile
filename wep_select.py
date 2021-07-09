@@ -51,7 +51,7 @@ while True:
     except ValueError:
         print("Provide an listed item value...")
         continue
-
+    
 # Pause
 while menu_lock == 'x':
     menu_lock = input("Press [ENTER] to continue")
