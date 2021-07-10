@@ -147,7 +147,7 @@ print("\nPlease select a pair of boots\n")
 for num, item in enumerate(gearBoots, 0):
     print(num, '. ' + item.title(), sep='')
 
-# PlayerInput - Gauntlets Selection
+# PlayerInput - Boots Selection
 while True:
     try:
         user_choice = int(input("Please choose a pair of boots: "))
