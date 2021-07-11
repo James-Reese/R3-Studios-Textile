@@ -4,7 +4,7 @@ print('Version: 0.0.1')
 print('Date: 2021')
 
 # Internal Code Vars
-menu_lock = 'x'
+menu_lock = 'locked'
 
 # Weapons List
 weapons = ['longsword', 'shortsword', 'spiked gloves', 'mace', 'halberd', 'dagger', 'staff', 'claws', 'club',
@@ -46,6 +46,16 @@ while True:
     except ValueError:
         print("Please select a valid option...")
         continue
+
+while menu_lock = 'locked':
+    print('Continue?\n')
+menu_lock = input('ENTER')
+ 
+import os
+os.system('cls' if os.name == 'nt' else 'clear')
+
+
+
 
 # PlayerInput - Second Weapon Selection
 while True:
