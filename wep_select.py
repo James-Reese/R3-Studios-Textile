@@ -36,7 +36,7 @@ for num, item in enumerate(weapons, 0):
 while True:
     try:
         user_choice = int(input("Please choose a weapon: "))
-        if 0 <= user_choice <= wep_len:
+        if 0 <= user_choice <= wep_len - 1:
             print('')
             print(f"You have selected: {weapons[user_choice].title()}")
             print("\nItem has been added to your inventory...\n")
@@ -52,7 +52,7 @@ while True:
 while True:
     try:
         user_choice = int(input("Please choose a secondary weapon: "))
-        if 0 <= user_choice <= wep_len:
+        if 0 <= user_choice <= wep_len -1:
             print('')
             print(f"'You have selected: '{weapons[user_choice].title()}")
             print("\nItem has been added to your inventory...\n")
@@ -72,7 +72,7 @@ for num, item in enumerate(gearHelm, 0):
 while True:
     try:
         user_choice = int(input("Please choose a helm: "))
-        if 0 <= user_choice <= helm_len:
+        if 0 <= user_choice <= helm_len -1:
             print('')
             print(f"'You have selected: '{gearHelm[user_choice].title()}")
             print("\nItem has been added to your inventory...\n")
@@ -92,7 +92,7 @@ for num, item in enumerate(gearCuirass, 0):
 while True:
     try:
         user_choice = int(input("Please choose a cuirass: "))
-        if 0 <= user_choice <= cuirass_len:            
+        if 0 <= user_choice <= cuirass_len -1:            
             print('')
             print(f"'You have selected: '{gearCuirass[user_choice].title()}")
             print("\nItem has been added to your inventory...\n")
@@ -112,7 +112,7 @@ for num, item in enumerate(gearGreaves, 0):
 while True:
     try:
         user_choice = int(input("Please choose a pair of greaves: "))
-        if 0 <= user_choice <= greaves_len:
+        if 0 <= user_choice <= greaves_len -1:
             print('')
             print(f"'You have selected: '{gearGreaves[user_choice].title()}")
             print("\nItem has been added to your inventory...\n")
@@ -132,7 +132,7 @@ for num, item in enumerate(gearGauntlets, 0):
 while True:
     try:
         user_choice = int(input("Please choose a pair of gauntlets: "))
-        if 0 <= user_choice <= gauntlets_len:
+        if 0 <= user_choice <= gauntlets_len -1:
             print('')
             print(f"'You have selected: '{gearGauntlets[user_choice].title()}")
             print("\nItem has been added to your inventory...\n")
@@ -152,7 +152,7 @@ for num, item in enumerate(gearBoots, 0):
 while True:
     try:
         user_choice = int(input("Please choose a pair of boots: "))
-        if 0 <= user_choice <= boots_len:
+        if 0 <= user_choice <= boots_len -1:
             print('')
             print(f"'You have selected: '{gearBoots[user_choice].title()}")
             print("\nItem has been added to your inventory...\n")
