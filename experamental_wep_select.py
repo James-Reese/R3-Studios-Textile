@@ -1,42 +1,7 @@
-import time
-import os
 print("CONCEPT - Player Items Management Module")
 print('Author: R3 Studios / OKNERD')
 print('Version: 0.0.1')
 print('Date: 2021')
-
-sec = ''
-item_defined = ''
-item = ''
-
-
-def item_selection():
-  """Select an in-game item"""
-  
-while True:
-    try:
-      user_choice = int(input(f'Please choose a {extra} {item}: '))
-        if 0 <= user_choice <= current_len:
-            print('')
-            print(f"{'You have selected: '}{current_item[user_choice].title()}")
-            print("\nItem has been added to your inventory...\n")
-            break
-        else:
-            print("Please select a valid option...")
-    except ValueError:
-        print("Please select a valid option...")
-        continue
-item_selection()
-
-
-def list_items():
-  """list all in-game item"""
-  
-  print(f"\nPlease select {item_defined}\n")
-for num, item in enumerate(current_item, 0):
-    print(num, '. ' + item.title(), sep='')
-    
-list_items()
 
 
 # Weapons List
@@ -68,12 +33,21 @@ for num, item in enumerate(weapons, 0):
 
 
 # PlayerInput - First Weapon Selection
-list_items()
-current_len = wep_len
-current_item = weapons
-item_selection()
+while True:
+    try:
+        user_choice = int(input("Please choose a weapon: "))
+        if 0 <= user_choice <= wep_len:
+            print('')
+            print(f"{'You have selected: '}{weapons[user_choice].title()}")
+            print("\nItem has been added to your inventory...\n")
+            break
+        else:
+            print("Please select a valid option...")
+    except ValueError:
+        print("Please select a valid option...")
+        continue
 
-
+{
 # PlayerInput - Second Weapon Selection
 while True:
     try:
