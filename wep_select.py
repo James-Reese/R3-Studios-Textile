@@ -47,7 +47,7 @@ while True:
         print("Please select a valid option...")
         continue
 
-{
+           
 # PlayerInput - Second Weapon Selection
 while True:
     try:
@@ -62,7 +62,7 @@ while True:
     except ValueError:
         print("Please select a valid option...")
         continue
-
+           
 # Lists All in-Game Helms
 print("\nPlease select a helm\n")
 for num, item in enumerate(gearHelm, 0):
