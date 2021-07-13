@@ -1,4 +1,4 @@
-print("CONCEPT - Player Items Management Module")
+print("CONCEPT - Player Items Selection Management Module")
 print('Author: R3 Studios / OKNERD')
 print('Version: 0.0.1')
 print('Date: 2021')
