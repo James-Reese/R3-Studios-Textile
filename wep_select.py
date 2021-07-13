@@ -3,7 +3,6 @@ print('Author: R3 Studios / OKNERD')
 print('Version: 0.0.1')
 print('Date: 2021')
 
-
 # Weapons List
 weapons = ['longsword', 'shortsword', 'spiked gloves', 'mace', 'halberd', 'dagger', 'staff', 'claws', 'club',
            'war hammer', 'war axe', 'spear', 'longbow', 'bow', 'crossbow', 'none']
@@ -25,12 +24,10 @@ gauntlets_len = len(gearGauntlets)
 gearBoots = ['leather boots', 'iron boots', 'steal boots', 'none']
 boots_len = len(gearBoots)
 
-
 # Lists All in-Game Weapons
 print("\nPlease select a weapon\n")
 for num, item in enumerate(weapons, 0):
     print(num, '. ' + item.title(), sep='')
-
 
 # PlayerInput - First Weapon Selection
 while True:
@@ -47,7 +44,6 @@ while True:
         print("Please select a valid option...")
         continue
 
-           
 # PlayerInput - Second Weapon Selection
 while True:
     try:
