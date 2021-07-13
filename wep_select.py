@@ -38,7 +38,7 @@ while True:
         user_choice = int(input("Please choose a weapon: "))
         if 0 <= user_choice <= wep_len:
             print('')
-            print(f"{'You have selected: '}{weapons[user_choice].title()}")
+            print(f"You have selected: {weapons[user_choice].title()}")
             print("\nItem has been added to your inventory...\n")
             break
         else:
@@ -54,7 +54,7 @@ while True:
         user_choice = int(input("Please choose a secondary weapon: "))
         if 0 <= user_choice <= wep_len:
             print('')
-            print(f"{'You have selected: '}{weapons[user_choice].title()}")
+            print(f"'You have selected: '{weapons[user_choice].title()}")
             print("\nItem has been added to your inventory...\n")
             break
         else:
@@ -74,7 +74,7 @@ while True:
         user_choice = int(input("Please choose a helm: "))
         if 0 <= user_choice <= helm_len:
             print('')
-            print(f"{'You have selected: '}{gearHelm[user_choice].title()}")
+            print(f"'You have selected: '{gearHelm[user_choice].title()}")
             print("\nItem has been added to your inventory...\n")
             break
         else:
@@ -94,7 +94,7 @@ while True:
         user_choice = int(input("Please choose a cuirass: "))
         if 0 <= user_choice <= cuirass_len:            
             print('')
-            print(f"{'You have selected: '}{gearCuirass[user_choice].title()}")
+            print(f"'You have selected: '{gearCuirass[user_choice].title()}")
             print("\nItem has been added to your inventory...\n")
             break
         else:
@@ -114,7 +114,7 @@ while True:
         user_choice = int(input("Please choose a pair of greaves: "))
         if 0 <= user_choice <= greaves_len:
             print('')
-            print(f"{'You have selected: '}{gearGreaves[user_choice].title()}")
+            print(f"'You have selected: '{gearGreaves[user_choice].title()}")
             print("\nItem has been added to your inventory...\n")
             break
         else:
@@ -134,7 +134,7 @@ while True:
         user_choice = int(input("Please choose a pair of gauntlets: "))
         if 0 <= user_choice <= gauntlets_len:
             print('')
-            print(f"{'You have selected: '}{gearGauntlets[user_choice].title()}")
+            print(f"'You have selected: '{gearGauntlets[user_choice].title()}")
             print("\nItem has been added to your inventory...\n")
             break
         else:
@@ -154,7 +154,7 @@ while True:
         user_choice = int(input("Please choose a pair of boots: "))
         if 0 <= user_choice <= boots_len:
             print('')
-            print(f"{'You have selected: '}{gearBoots[user_choice].title()}")
+            print(f"'You have selected: '{gearBoots[user_choice].title()}")
             print("\nItem has been added to your inventory...\n")
             break
         else:
