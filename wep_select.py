@@ -1,162 +1,90 @@
-print("CONCEPT - Player Items Selection Management Module")
-print('Author: R3 Studios / OKNERD')
-print('Version: 0.0.1')
+import time
+import os
+print("Player Items Selection Management Module")
+print('Author: OKNERD/R3 STUDIOS')
+print('Version: pre-production v2')
 print('Date: 2021')
 
+
+class TextColors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
 # Weapons List
-weapons = ['longsword', 'shortsword', 'spiked gloves', 'mace', 'halberd', 'dagger', 'staff', 'claws', 'club',
-           'war hammer', 'war axe', 'spear', 'longbow', 'bow', 'crossbow', 'none']
-wep_len = len(weapons)
+weapons = ['none', 'longsword', 'shortsword', 'spiked gloves', 'mace', 'halberd', 'dagger', 'staff', 'claws',
+           'club', 'war hammer', 'war axe', 'spear', 'longbow', 'bow', 'crossbow']
+weapons_len = len(weapons)
 
-# Gear & Armor List
-gearHelm = ['leather helm', 'iron helm', 'steal helm', 'none']
+# Equipment & Armor List
+gearHelm = ['none', 'leather helm', 'iron helm', 'steal helm']
 helm_len = len(gearHelm)
-
-gearCuirass = ['leather cuirass', 'iron cuirass', 'steal cuirass', 'none']
+gearCuirass = ['none', 'iron cuirass', 'steal cuirass']
 cuirass_len = len(gearCuirass)
-
-gearGreaves = ['leather greaves', 'iron greaves', 'steal greaves', 'none']
+gearGreaves = ['none', 'leather greaves', 'iron greaves', 'steal greaves']
 greaves_len = len(gearGreaves)
-
-gearGauntlets = ['leather gauntlets', 'iron gauntlets', 'steal gauntlets', 'none']
+gearGauntlets = ['none', 'leather gauntlets', 'iron gauntlets', 'steal gauntlets']
 gauntlets_len = len(gearGauntlets)
-
-gearBoots = ['leather boots', 'iron boots', 'steal boots', 'none']
+gearBoots = ['none', 'leather boots', 'iron boots', 'steal boots']
 boots_len = len(gearBoots)
 
-# Lists All in-Game Weapons
-print("\nPlease select a weapon\n")
-for num, item in enumerate(weapons, 0):
-    print(num, '. ' + item.title(), sep='')
 
-# PlayerInput - First Weapon Selection
-while True:
-    try:
-        user_choice = int(input("Please choose a weapon: "))
-        if 0 <= user_choice <= wep_len - 1:
-            print('')
-            print(f"You have selected: {weapons[user_choice].title()}")
-            print("\nItem has been added to your inventory...\n")
-            break
-        else:
-            print("Please select a valid option...")
-    except ValueError:
-        print("Please select a valid option...")
-        continue
+# Item Selection Function
+def item_select(item_type, item_len, output_trigger):
+    loop_gate = 1
+    while loop_gate == 1:
+        try:
+            print('\nItem Selection Menu\n')
+            for num, item in enumerate(item_type, 0):
+                print(num, '. ' + item.title(), sep='')
+            if item_type == weapons:
+                output_type = 'a weapon'
+            else:
+                output_type = 'an item'
+            if output_trigger == 1:
+                output_type = 'a second weapon'
+            else:
+                pass
+            user_choice = int(input(f'\nSelect {output_type}: '))
+            if 0 <= user_choice <= item_len - 1:
+                print('')
+                # PlayerInput - Starting Item Selections
+                print(f'You have selected: {item_type[user_choice].title()}')
+                print('\nItem has been added to your inventory...\n')
+                time.sleep(.9)
+                os.system('cls')
+                loop_gate = 0
+                continue
+            else:
+                loop_gate = 1
+                os.system('cls')
+            print(f'{TextColors.FAIL}\nPlease select a valid option...{TextColors.ENDC}')
+        except ValueError:
+            loop_gate = 1
+            os.system('cls')
+            print(f'{TextColors.FAIL}\nPlease select a valid option...{TextColors.ENDC}')
 
-# PlayerInput - Second Weapon Selection
-while True:
-    try:
-        user_choice = int(input("Please choose a secondary weapon: "))
-        if 0 <= user_choice <= wep_len -1:
-            print('')
-            print(f"'You have selected: '{weapons[user_choice].title()}")
-            print("\nItem has been added to your inventory...\n")
-            break
-        else:
-            print("Please select a valid option...")
-    except ValueError:
-        print("Please select a valid option...")
-        continue
-           
-# Lists All in-Game Helms
-print("\nPlease select a helm\n")
-for num, item in enumerate(gearHelm, 0):
-    print(num, '. ' + item.title(), sep='')
-    
-# PlayerInput - Helm Selection
-while True:
-    try:
-        user_choice = int(input("Please choose a helm: "))
-        if 0 <= user_choice <= helm_len -1:
-            print('')
-            print(f"'You have selected: '{gearHelm[user_choice].title()}")
-            print("\nItem has been added to your inventory...\n")
-            break
-        else:
-            print("Please select a valid option...")
-    except ValueError:
-        print("Please select a valid option...")
-        continue
-        
-# Lists All in-Game Cuirass
-print("\nPlease select a cuirass\n")
-for num, item in enumerate(gearCuirass, 0):
-    print(num, '. ' + item.title(), sep='')
 
-# PlayerInput - Cuirass Selection
-while True:
-    try:
-        user_choice = int(input("Please choose a cuirass: "))
-        if 0 <= user_choice <= cuirass_len -1:            
-            print('')
-            print(f"'You have selected: '{gearCuirass[user_choice].title()}")
-            print("\nItem has been added to your inventory...\n")
-            break
-        else:
-            print("Please select a valid option...")
-    except ValueError:
-        print("Please select a valid option...")
-        continue
+#Item Selection
+item_select(item_type=weapons, item_len=weapons_len, output_trigger=0)
 
-# Lists All in-Game Greaves
-print("\nPlease select a pair of greaves\n")
-for num, item in enumerate(gearGreaves, 0):
-    print(num, '. ' + item.title(), sep='')
+item_select(item_type=weapons, item_len=weapons_len, output_trigger=1)
 
-# PlayerInput - Greaves Selection
-while True:
-    try:
-        user_choice = int(input("Please choose a pair of greaves: "))
-        if 0 <= user_choice <= greaves_len -1:
-            print('')
-            print(f"'You have selected: '{gearGreaves[user_choice].title()}")
-            print("\nItem has been added to your inventory...\n")
-            break
-        else:
-            print("Please select a valid option...")
-    except ValueError:
-        print("Please select a valid option...")
-        continue
+item_select(item_type=gearHelm, item_len=helm_len, output_trigger=0)
 
-# Lists All in-Game Gauntlets
-print("\nPlease select a pair of gauntlets\n")
-for num, item in enumerate(gearGauntlets, 0):
-    print(num, '. ' + item.title(), sep='')
+item_select(item_type=gearCuirass, item_len=cuirass_len, output_trigger=0)
 
-# PlayerInput - Gauntlets Selection
-while True:
-    try:
-        user_choice = int(input("Please choose a pair of gauntlets: "))
-        if 0 <= user_choice <= gauntlets_len -1:
-            print('')
-            print(f"'You have selected: '{gearGauntlets[user_choice].title()}")
-            print("\nItem has been added to your inventory...\n")
-            break
-        else:
-            print("Please select a valid option...")
-    except ValueError:
-        print("Please select a valid option...")
-        continue
-        
-# Lists All in-Game Boots
-print("\nPlease select a pair of boots\n")
-for num, item in enumerate(gearBoots, 0):
-    print(num, '. ' + item.title(), sep='')
+item_select(item_type=gearGreaves, item_len=greaves_len, output_trigger=0)
 
-# PlayerInput - Boots Selection
-while True:
-    try:
-        user_choice = int(input("Please choose a pair of boots: "))
-        if 0 <= user_choice <= boots_len -1:
-            print('')
-            print(f"'You have selected: '{gearBoots[user_choice].title()}")
-            print("\nItem has been added to your inventory...\n")
-            break
-        else:
-            print("Please select a valid option...")
-    except ValueError:
-        print("Please select a valid option...")
-        continue
+item_select(item_type=gearGauntlets, item_len=gauntlets_len, output_trigger=0)
 
-end = ()
+item_select(item_type=gearBoots, item_len=boots_len, output_trigger=0)
+
+exit()
