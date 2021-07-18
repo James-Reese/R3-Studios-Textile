@@ -19,8 +19,8 @@ class TextColors:
 
 
 # Weapons List
-weapons = ['none', 'longsword', 'shortsword', 'spiked gloves', 'mace', 'halberd', 'dagger', 'staff', 'claws',
-           'club', 'war hammer', 'war axe', 'spear', 'longbow', 'bow', 'crossbow']
+weapons = ['none', 'longsword', 'shortsword', 'spiked gloves', 'mace', 'halberd', 'dagger',
+           'staff', 'claws', 'club', 'war hammer', 'war axe', 'spear', 'longbow', 'bow', 'crossbow']
 weapons_len = len(weapons)
 
 # Equipment & Armor List
@@ -72,19 +72,13 @@ def item_select(item_type, item_len, output_trigger):
             print(f'{TextColors.FAIL}\nPlease select a valid option...{TextColors.ENDC}')
 
 
-#Item Selection
+# Item Selection
 item_select(item_type=weapons, item_len=weapons_len, output_trigger=0)
-
 item_select(item_type=weapons, item_len=weapons_len, output_trigger=1)
-
 item_select(item_type=gearHelm, item_len=helm_len, output_trigger=0)
-
 item_select(item_type=gearCuirass, item_len=cuirass_len, output_trigger=0)
-
 item_select(item_type=gearGreaves, item_len=greaves_len, output_trigger=0)
-
 item_select(item_type=gearGauntlets, item_len=gauntlets_len, output_trigger=0)
-
 item_select(item_type=gearBoots, item_len=boots_len, output_trigger=0)
 
 exit()
