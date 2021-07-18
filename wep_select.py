@@ -1,6 +1,6 @@
 print("CONCEPT - Player Items Selection Management Module")
 print('Author: R3 Studios / OKNERD')
-print('Version: 0.0.1')
+print('Version: Pre-production v1')
 print('Date: 2021')
 
 # Weapons List
