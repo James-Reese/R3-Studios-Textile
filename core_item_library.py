@@ -1,6 +1,4 @@
-import time
-import os
-print("Player Items Selection Management Module")
+print("CORE ITEMS LIBRARY")
 print('Author: OKNERD/R3 STUDIOS')
 print('Version: Pre-Production v2')
 print('Date: 2021')
@@ -9,7 +7,7 @@ weapons = {
   "0x0001": {
     "name": "longsword",
     "dmg": damge_module
-    "value":
+    "value": economic_module
   },
   "0x0002": {
     "name": "shortsword",
