@@ -8,7 +8,7 @@ print('Date: 2021')
 weapons = {
   "0x0001": {
     "name": "longsword",
-    "dmg":
+    "dmg": damge_module
     "value":
   },
   "0x0002": {
@@ -18,57 +18,57 @@ weapons = {
   },
   "0x0003": {
     "name": "spiked gloves",
-    "dmg":
+    "dmg": damge_module
     "value":
   },
   "0x0004": {
     "name": "mace",
-    "dmg":
+    "dmg": damge_module
     "value":
   },
   "0x0005": {
     "name": "halberd",
-    "dmg":
+    "dmg": damge_module
     "value":
   },
   "0x0006": {
     "name": "staff",
-    "dmg":
+    "dmg": damge_module
     "value":
   },
   "0x0007": {
     "name": "claws",
-    "dmg":
+    "dmg": damge_module
     "value": 2007
   },
   "0x0008": {
     "name": "club",
-    "dmg":
+    "dmg": damge_module
     "value": 2011
   },
   "0x0009": {
     "name": "war hammer",
-    "dmg":
+    "dmg": damge_module
     "value": 2004
   },
   "0x0010": {
     "name": "war axe",
-    "dmg":
+    "dmg": damge_module
     "value": 2007
   },
   "0x0011": {
     "name": "spear",
-    "dmg":
+    "dmg": damge_module
     "value": 2011
   },
   "0x0012": {
     "name": "bow",
-    "dmg":
+    "dmg": damge_module
     "value": 2011
   },
-  "child3": {
+  "0x0013": {
     "value": "crossbow",
-    "dmg":
+    "dmg": damge_module
     "year": 2011
   }
 }
