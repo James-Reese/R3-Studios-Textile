@@ -1,2 +1,2 @@
 # R3-Studios-Textile
-Text based RPG
+This basic framework is an Open Source text-based : turn-based "TBROG". This branch is intended for drafts prior to optimization per revision. 
